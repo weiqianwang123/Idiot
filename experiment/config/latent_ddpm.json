@@ -1,0 +1,33 @@
+{
+  "model": {
+    "latent_dim": 128,
+    "hidden_channels": 64,
+    "latent_hidden_dim": 512,
+    "timesteps": 1000,
+    "vae_checkpoint": "output/vae/vae.pt"
+  },
+  "train": {
+    "data_dir": "data",
+    "output_dir": "output/latent_ddpm",
+    "epochs": 1,
+    "batch_size": 128,
+    "lr": 0.0002,
+    "num_workers": 2,
+    "device": "cuda",
+    "seed": 7,
+    "sample_count": 64
+  },
+  "eval": {
+    "checkpoint": "output/latent_ddpm/latent_ddpm.pt",
+    "data_dir": "data",
+    "output_dir": "output/latent_ddpm_eval",
+    "batch_size": 128,
+    "num_workers": 2,
+    "device": "cuda",
+    "seed": 7,
+    "max_batches": null,
+    "loss_repeats": 1,
+    "sample_count": 64,
+    "skip_sampling": false
+  }
+}

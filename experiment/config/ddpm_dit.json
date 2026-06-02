@@ -1,0 +1,35 @@
+{
+  "model": {
+    "denoiser": "dit",
+    "dit_patch_size": 4,
+    "dit_hidden_dim": 256,
+    "dit_depth": 6,
+    "dit_heads": 8,
+    "dit_mlp_ratio": 4.0,
+    "timesteps": 1000
+  },
+  "train": {
+    "data_dir": "data",
+    "output_dir": "output/dit_ddpm",
+    "epochs": 1,
+    "batch_size": 128,
+    "lr": 0.0002,
+    "num_workers": 2,
+    "device": "cuda",
+    "seed": 7,
+    "sample_count": 64
+  },
+  "eval": {
+    "checkpoint": "output/dit_ddpm/ddpm.pt",
+    "data_dir": "data",
+    "output_dir": "output/dit_ddpm_eval",
+    "batch_size": 128,
+    "num_workers": 2,
+    "device": "cuda",
+    "seed": 7,
+    "max_batches": null,
+    "loss_repeats": 1,
+    "sample_count": 64,
+    "skip_sampling": false
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "model": {
+    "denoiser": "unet",
+    "base_channels": 64,
+    "timesteps": 1000
+  },
+  "train": {
+    "data_dir": "data",
+    "output_dir": "output/ddpm",
+    "epochs": 1,
+    "batch_size": 128,
+    "lr": 0.0002,
+    "num_workers": 2,
+    "device": "cuda",
+    "seed": 7,
+    "sample_count": 64
+  },
+  "eval": {
+    "checkpoint": "output/ddpm/ddpm.pt",
+    "data_dir": "data",
+    "output_dir": "output/ddpm_eval",
+    "batch_size": 128,
+    "num_workers": 2,
+    "device": "cuda",
+    "seed": 7,
+    "max_batches": null,
+    "loss_repeats": 1,
+    "sample_count": 64,
+    "skip_sampling": false
+  }
+}

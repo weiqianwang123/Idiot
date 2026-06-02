@@ -2,9 +2,11 @@
 
 Handwritten algorithm and data-structure implementations live here.
 
-Keep files focused and readable. Prefer naming files by the concept they implement, such as:
+Keep files focused and readable.
 
-- `binary_search.py`
-- `dijkstra.py`
-- `union_find.py`
-- `knapsack.py`
+## Current Implementations
+
+- `vae.py`: `SimpleVAE`, a compact convolutional VAE for CIFAR-10 sized images.
+- `ddpm.py`: `DDPM`, `DenoiseUNet`, and `LatentDenoiser`.
+- `dit.py`: `DenoiseDiT`, a compact Diffusion Transformer image denoiser.
+- `vae_ddpm.py`: `LatentDDPM`, a VAE encoder/decoder wrapped around latent-space diffusion.

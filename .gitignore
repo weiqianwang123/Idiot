@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Local datasets and temporary outputs
+data/*
+!data/README.md
+output/*
+!output/README.md
+
+# Model artifacts
+*.ckpt
+*.pth
+*.pt
+
+# OS/editor noise
+.DS_Store
+.vscode/
+.idea/

@@ -1,0 +1,30 @@
+{
+  "model": {
+    "latent_dim": 128,
+    "hidden_channels": 64,
+    "beta": 0.0
+  },
+  "train": {
+    "data_dir": "data",
+    "output_dir": "output/vae_no_kl",
+    "epochs": 20,
+    "batch_size": 128,
+    "lr": 0.0002,
+    "disable_kl": true,
+    "num_workers": 2,
+    "device": "cuda",
+    "seed": 7,
+    "sample_count": 64
+  },
+  "eval": {
+    "checkpoint": "output/vae_no_kl/vae.pt",
+    "data_dir": "data",
+    "output_dir": "output/vae_no_kl_eval",
+    "batch_size": 128,
+    "num_workers": 2,
+    "device": "cuda",
+    "max_batches": null,
+    "comparison_count": 16,
+    "sample_count": 64
+  }
+}

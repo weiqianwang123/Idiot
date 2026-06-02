@@ -11,8 +11,10 @@ This repo is a personal algorithm playground.
 ## Structure
 
 - `concept/`: handwritten algorithm and data-structure implementations.
-- `experiment/`: small tests, demos, benchmarks, or sanity checks for `concept/`.
+- `experiment/`: config-driven training and evaluation entrypoints for `concept/`.
+- `test/`: automatic checks for concept implementations.
 - `data/`: small sample datasets and input files for experiments.
+- `output/`: temporary generated results and checkpoints.
 - `codex/skills/`: future local workflow notes or Codex skills for this project.
 
 ## Working Style
@@ -24,4 +26,13 @@ This repo is a personal algorithm playground.
 
 ## Current Status
 
-- Initial project folder structure created.
+- Conda environment `idiot` created with Python 3.11.
+- Environment pinned to PyTorch CUDA 12.8 wheels for GPU training on the current NVIDIA driver.
+- VAE, DDPM, DiT denoiser, and VAE + latent DDPM implementations added.
+- Experiment configs live in `experiment/config/`.
+- VAE train/eval lives in `experiment/vae.py`.
+- Pixel-space DDPM train/eval lives in `experiment/ddpm.py`.
+- Latent DDPM train/eval lives in `experiment/latent_ddpm.py`.
+- VAE no-KL training is controlled by `experiment/config/vae_no_kl.json`.
+- Automatic GPU checks live in `test/` and run with `pytest test`.
+- `data/` and `output/` contents are ignored by git except README files.
